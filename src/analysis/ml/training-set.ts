@@ -4,9 +4,10 @@ import {iterateDateRange, toYMDString} from "../dates/helpers";
 import {featuresToTensor, getFeaturesForDay} from "./features";
 import {HolidayService} from "../holidays/HolidayService";
 import {groupTransactionsByDate} from "../transactions/group/group";
+import {DayFeatures} from "../../types/Feature";
 
 type ClassificationCategory = 0 | 1;
-type TrainingSetItem = [Tensor, ClassificationCategory];
+type TrainingSetItem = [Tensor, ClassificationCategory, DayFeatures, Date];
 
 type TrainingSet = Array<TrainingSetItem>;
 
@@ -41,7 +42,9 @@ export const createTrainingSetFromTransactions = (
         trainingSet.push([
             featuresTensor,
             hadTransactions ? 1 : 0,
-        ])
+            features,
+            date
+        ]);
     });
 
     return trainingSet;
