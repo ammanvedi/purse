@@ -1,0 +1,221 @@
+export const transactions5YX = {
+  "accounts": [
+    {
+      "account_id": "5YxoappV1vH8we0rE6RbCEaqr5dQ0DUBJd9ZD",
+      "balances": {
+        "available": 0,
+        "current": 0,
+        "iso_currency_code": "GBP",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "4590",
+      "name": "CurrentAccount 4590",
+      "official_name": null,
+      "subtype": "checking",
+      "type": "depository"
+    }
+  ],
+  "item": {
+    "available_products": ["auth", "balance"],
+    "billed_products": ["transactions"],
+    "consent_expiration_time": "2020-07-09T14:05:17Z",
+    "error": null,
+    "institution_id": "ins_59",
+    "item_id": "PrO4kzz0m6iyo7naQ6dKUZbxLMbZ87FmY6qNq",
+    "webhook": ""
+  },
+  "total_transactions": 5,
+  "transactions": [
+    {
+      "account_id": "5YxoappV1vH8we0rE6RbCEaqr5dQ0DUBJd9ZD",
+      "account_owner": null,
+      "amount": 500.02,
+      "authorized_date": null,
+      "category": ["Transfer", "Debit"],
+      "category_id": "21006000",
+      "date": "2020-02-28",
+      "iso_currency_code": "GBP",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "name": "201815 00628700 MOBILE-CHANNEL FT Barclays current account",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_code": null,
+      "transaction_id": "eAV0Ewwn9ZtLmqxw6Z0eHzj9OMw8XdHdpeAw1",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "5YxoappV1vH8we0rE6RbCEaqr5dQ0DUBJd9ZD",
+      "account_owner": null,
+      "amount": 62,
+      "authorized_date": null,
+      "category": ["Transfer", "Debit"],
+      "category_id": "21006000",
+      "date": "2020-02-26",
+      "iso_currency_code": "GBP",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "name": "201815 00628700 MOBILE-CHANNEL FT Barclays current account",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_code": null,
+      "transaction_id": "YwPLJzz5ZKuan73ZrK1xHROboMEeQAtQypR0N",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "5YxoappV1vH8we0rE6RbCEaqr5dQ0DUBJd9ZD",
+      "account_owner": null,
+      "amount": 17.98,
+      "authorized_date": null,
+      "category": ["Transfer", "Debit"],
+      "category_id": "21006000",
+      "date": "2020-02-23",
+      "iso_currency_code": "GBP",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "name": "201815 00628700 DOMAINS FT Barclays current account",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_code": null,
+      "transaction_id": "zn9kx880r1T5nE3890NytLge410abOFOoBVgL",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "5YxoappV1vH8we0rE6RbCEaqr5dQ0DUBJd9ZD",
+      "account_owner": null,
+      "amount": 20,
+      "authorized_date": null,
+      "category": ["Service", "Computers"],
+      "category_id": "18012000",
+      "date": "2020-02-23",
+      "iso_currency_code": "GBP",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "name": "201815 00628700 GITHUB FT Barclays current account",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_code": null,
+      "transaction_id": "mJLZq336DOsKBqv3z6YeCg75QVD1yMsMX4zXD",
+      "transaction_type": "place",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "5YxoappV1vH8we0rE6RbCEaqr5dQ0DUBJd9ZD",
+      "account_owner": null,
+      "amount": -600,
+      "authorized_date": null,
+      "category": ["Transfer", "Credit"],
+      "category_id": "21005000",
+      "date": "2020-02-23",
+      "iso_currency_code": "GBP",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "name": "201815 30238074 MOBILE-CHANNEL FT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_code": null,
+      "transaction_id": "dk7vMddQn8t6brDQw857cO9q1v68dbcbB1MBP",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    }
+  ]
+}
