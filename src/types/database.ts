@@ -11,14 +11,13 @@ export type AccountTransaction = {
     id?: string,
     amount: number,
     utcTimestamp: number,
-    isoCurrency: string,
-    name: string,
-    category: string,
+    isoCurrency: string | null,
+    name: string | null,
+    category: string | null,
     pending: 0 | 1,
-    paymentChannel: string,
     bankAccountId: string,
-    pendingTransactionId?: string,
-    transferTransactionId?: string,
+    pendingTransactionId?: string | null,
+    transferTransactionId?: string | null,
 }
 
 export type BankAccount = {

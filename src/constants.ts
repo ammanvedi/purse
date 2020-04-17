@@ -1,0 +1,1 @@
+export const DATA_REFRESH_MS = 1000 * 60 * 20;

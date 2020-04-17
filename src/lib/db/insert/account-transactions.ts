@@ -1,7 +1,7 @@
 import {AccountTransaction} from "../../../types/database";
 
 export const addOrUpdateAccountTransaction = (transaction: AccountTransaction): string => `
-    INSERT INTO accountTransactions (id, amount, utcTimestamp, isoCurrency, name, category, pending, paymentChannel, bankAccountId, pendingTransactionId)
+    INSERT INTO accountTransactions (id, amount, utcTimestamp, isoCurrency, name, category, pending, bankAccountId, pendingTransactionId)
     VALUES (
             "${transaction.id}",
             ${transaction.amount},
@@ -10,7 +10,6 @@ export const addOrUpdateAccountTransaction = (transaction: AccountTransaction): 
             "${transaction.name}",
             "${transaction.category}",
             ${transaction.pending},
-            "${transaction.paymentChannel}",
             "${transaction.bankAccountId}",
             "${transaction.pendingTransactionId}"
             )
