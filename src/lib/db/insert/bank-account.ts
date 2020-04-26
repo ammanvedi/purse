@@ -15,3 +15,5 @@ export const addOrUpdateBankAccount = (account: BankAccount): string => `
         balanceCurrent=excluded.balanceCurrent,
         balanceAvailable=excluded.balanceAvailable
 `;
+
+export const getUserAccount

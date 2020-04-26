@@ -1,0 +1,123 @@
+enum AccountType {
+    DEPOSITORY
+}
+
+enum DayBasedFrequency {
+    WEEKLY_ONCE
+    WEEKDAYS
+    WEEKENDS
+    EVERY_MONDAY
+    EVERY_TUESDAY
+    EVERY_WEDNESDAY
+    EVERY_THURSDAY
+    EVERY_FRIDAY
+    EVERY_SATURDAY
+    LAST_FRIDAY_OF_MONTH
+}
+
+enum DateBasedFrequency {
+    MONTHLY_ONCE
+}
+
+type DayBasedFrequencyDescription {
+    type: DayBasedFrequency!
+}
+
+type DateBasedFrequencyDescription {
+    type: DateBasedFrequency
+    date: Int!
+}
+
+union ExpenseFrequency = DayBasedFrequencyDescription | DateBasedFrequencyDescription
+
+input DayBasedFrequencyDescriptionInput {
+    type: DayBasedFrequency!
+}
+
+input DateBasedFrequencyDescriptionInput {
+    type: DateBasedFrequency
+    date: Int!
+}
+
+type AccountHolder {
+    id: ID!
+    userName: String!
+    firstName: String!
+    lastName: String!
+}
+
+type Category {
+    id: ID!
+    description: String!
+}
+
+type Account {
+    id: ID!
+    balanceCurrent: Float!
+    balanceAvailable: Float!
+    name: String!
+    type: AccountType!
+    isoCurrency: String!
+}
+
+type Transaction {
+    id: ID!
+    amount: Float!
+    utcTimestamp: Int!
+    isoCurrency: String
+    name: String
+    category: Category
+    pending: Boolean!
+    account: Account!
+    pendingTransaction: Transaction
+    transferTransaction: Transaction
+}
+
+type Expense {
+    id: ID!
+    frequency: ExpenseFrequency!
+    name: String!
+    description: String
+    priceBoundLower: Float!
+    priceBoundUpper: Float!
+    utcTimestampCreated: Int!
+    transactions: [Transaction!]!
+}
+
+type Forecast {
+    utcFrom: Int!
+    utcTo: Int!
+    expenses: [Expense!]!
+}
+
+input CreateExpenseInput {
+    dayFrequency: DayBasedFrequencyDescriptionInput
+    dateFrequency: DateBasedFrequencyDescriptionInput
+    name: String!
+    description: String
+    priceBoundLower: Float!
+    priceBoundUpper: Float!
+    paused: Boolean!
+}
+
+input UpdateExpenseInput {
+    id: ID!
+    dayFrequency: DayBasedFrequencyDescriptionInput
+    dateFrequency: DateBasedFrequencyDescriptionInput
+    name: String!
+    description: String
+    priceBoundLower: Float!
+    priceBoundUpper: Float!
+    paused: Boolean!
+}
+
+type Mutation {
+    createExpense(expense: CreateExpenseInput): Forecast
+    deleteExpense(id: ID!): Forecast
+    updateExpense(expense: UpdateExpenseInput): Forecast
+}
+
+type Query {
+    accounts: [Account!]!
+    forecast: Forecast
+}

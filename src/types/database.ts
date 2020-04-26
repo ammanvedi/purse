@@ -35,12 +35,26 @@ export type Category = {
     description: string,
 }
 
+export type ExpenseUpdateProperties =
+    | 'frequencyType'
+    | 'name'
+    | 'description'
+    | 'id'
+    | 'frequencyDate'
+    | 'priceBoundLower'
+    | 'priceBoundUpper'
+    | 'paused'
+
 export type Expense = {
     id?: number,
     frequencyType: number,
+    frequencyDate?: number,
     name: string,
     description: string,
     utcTimestampCreated: number,
+    priceBoundLower: number,
+    priceBoundUpper: number,
+    paused: number,
 }
 
 export type ExpenseTransaction = {

@@ -146,7 +146,8 @@ export const resolveInterAccountTransfers = async (
 export const populateDatabase = async (
   client: Plaid.Client,
   accessToken: string,
-  db: sql.Database
+  db: sql.Database,
+  holderId: number
 ): Promise<void> => {
   const now = Date.now();
   const endDate = getDateFromISO(new Date(now));
@@ -173,7 +174,7 @@ export const populateDatabase = async (
   const { accounts } = await client.getAccounts(accessToken);
 
   for (let i = 0; i < accounts.length; i++) {
-    const modeled = apiAccountToDB(accounts[i], 1);
+    const modeled = apiAccountToDB(accounts[i], holderId);
     const insertQuery = addOrUpdateBankAccount(modeled);
     try {
       logInfo(`Attempting to upsert bank account ${modeled.id}`);

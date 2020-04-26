@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "generate-types": "graphql-codegen",
     "test": "jest",
-    "build": "tsc && npm run post-build",
+    "build": "npm run generate-types && tsc && npm run post-build",
     "post-build": "cp .env dist/ && cp -R src/lib/db/schema/. dist/lib/db/schema/",
     "start": "cd dist && node index.js"
   },
@@ -13,11 +14,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@graphql-codegen/cli": "^1.13.3",
+    "@graphql-codegen/typescript": "^1.13.3",
+    "@graphql-codegen/typescript-resolvers": "^1.13.3",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.6",
     "@types/sqlite3": "^3.1.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "graphql": "^15.0.0",
     "plaid": "^4.10.0",
     "sql-template-strings": "^2.2.2",
     "sqlite3": "^4.1.1"

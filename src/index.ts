@@ -38,7 +38,7 @@ createDatabase(env.PURSE_DB_PATH)
 
     app.listen(env.PURSE_PORT);
 
-    const populateDatabaseFunc = populateDatabase.bind(null, plaidClient, env.PLAID_ACCESS_TOKEN, db);
+    const populateDatabaseFunc = populateDatabase.bind(null, plaidClient, env.PLAID_ACCESS_TOKEN, db, 1);
 
     setInterval(populateDatabaseFunc, DATA_REFRESH_MS);
 
