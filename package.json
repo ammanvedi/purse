@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@graphql-codegen/cli": "^1.13.3",
+    "@graphql-codegen/cli": "^1.21.8",
     "@graphql-codegen/typescript": "^1.13.3",
     "@graphql-codegen/typescript-resolvers": "^1.13.3",
     "@types/dotenv": "^8.2.0",
