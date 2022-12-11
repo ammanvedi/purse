@@ -21,7 +21,7 @@
     "@types/express": "^4.17.6",
     "@types/sqlite3": "^3.1.6",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^15.0.0",
     "plaid": "^4.10.0",
     "sql-template-strings": "^2.2.2",
